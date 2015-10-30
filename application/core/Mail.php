@@ -75,6 +75,9 @@ class Mail
 		} else {
 			$mail->IsMail();
 		}
+		
+		/// Fix the problem of emails with special characters
+		$mail->CharSet = 'UTF-8';
 
 		// fill mail with data
 		$mail->From = $from_email;
